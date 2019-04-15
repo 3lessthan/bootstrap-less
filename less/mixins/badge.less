@@ -1,0 +1,14 @@
+@import "./hover.less";
+
+#badge-variant(@bg; @color) {
+	color: @color;
+	background-color: @bg;
+
+	&[href] {
+		#hover-focus({
+			color: @color;
+			text-decoration: none;
+			background-color: darken(@bg, 10%);
+		})
+	}
+}
