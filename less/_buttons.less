@@ -65,12 +65,12 @@ fieldset:disabled a.btn {
 //  }
 //}
 //#button-variant( @background, @border, @hover-background, @hover-border, @active-background, @active-border, @color, @hover-color, @disabled-color, @active-color)
-.btn-primary   { #button-variant(@primary, @primary, @color: @white, @hover-color: @white, @disabled-color: @white, @active-color: @white); }
-.btn-secondary { #button-variant(@secondary, @secondary, @color: @white, @hover-color: @white, @disabled-color: @white, @active-color: @white); }
-.btn-success   { #button-variant(@success, @success, @color: @white, @hover-color: @white, @disabled-color: @white, @active-color: @white); }
-.btn-info      { #button-variant(@info, @info, @color: @white, @hover-color: @white, @disabled-color: @white, @active-color: @white); }
-.btn-warning   { #button-variant(@warning, @warning, @color: @white, @hover-color: @white, @disabled-color: @white, @active-color: @white); }
-.btn-danger    { #button-variant(@danger, @danger, @color: @white, @hover-color: @white, @disabled-color: @white, @active-color: @white); }
+.btn-primary   { #button-variant(@primary, @primary); }
+.btn-secondary { #button-variant(@secondary, @secondary); }
+.btn-success   { #button-variant(@success, @success); }
+.btn-info      { #button-variant(@info, @info); }
+.btn-warning   { #button-variant(@warning, @warning); }
+.btn-danger    { #button-variant(@danger, @danger); }
 
 //@each $color, $value in $theme-colors {
 //  .btn-outline-#{$color} {
@@ -82,12 +82,12 @@ fieldset:disabled a.btn {
 //  }
 //}
 //.button-outline-variant( @color, @color-hover, @active-background, @active-border, @active-color )
-.btn-outline-primary   { #button-outline-variant(@primary,   @white, @active-color: @white); }
-.btn-outline-secondary { #button-outline-variant(@secondary, @white, @active-color: @white); }
-.btn-outline-success   { #button-outline-variant(@success,   @white, @active-color: @white); }
-.btn-outline-info      { #button-outline-variant(@info,      @white, @active-color: @white); }
-.btn-outline-warning   { #button-outline-variant(@warning,   @white, @active-color: @white); }
-.btn-outline-danger    { #button-outline-variant(@danger,    @white, @active-color: @white); }
+.btn-outline-primary   { #button-outline-variant(@primary); }
+.btn-outline-secondary { #button-outline-variant(@secondary); }
+.btn-outline-success   { #button-outline-variant(@success); }
+.btn-outline-info      { #button-outline-variant(@info); }
+.btn-outline-warning   { #button-outline-variant(@warning); }
+.btn-outline-danger    { #button-outline-variant(@danger); }
 
 //
 // Link buttons
@@ -115,7 +115,6 @@ fieldset:disabled a.btn {
 		color: @btn-link-disabled-color;
 		pointer-events: none;
 	}
-
 	// No need for an active state here
 }
 
