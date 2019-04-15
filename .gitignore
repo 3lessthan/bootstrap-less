@@ -1,0 +1,11 @@
+# Node.js
+node_modules
+
+# VSCode
+.vscode/*.code-workspace
+
+# MacOS
+## General
+.DS_Store
+.AppleDouble
+.LSOverride
