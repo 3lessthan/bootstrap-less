@@ -583,22 +583,20 @@
 @form-feedback-icon-invalid-color:  @form-feedback-invalid-color;
 @form-feedback-icon-invalid:        %(~'url("data:image/svg+xml,%s%s%s")', "%3csvg xmlns='http://www.w3.org/2000/svg' fill='", replace("@{form-feedback-icon-invalid-color}", "#", "%23"), "' viewBox='-2 -2 7 7'%3e%3cpath stroke='", replace("@{form-feedback-icon-invalid-color}", "#", "%23"), "' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
 
-// Some form validation states stuff missing.
-// $form-validation-states: () !default;
-// // stylelint-disable-next-line scss/dollar-variable-default
-// $form-validation-states: map-merge(
-//   (
-//     "valid": (
-//       "color": $form-feedback-valid-color,
-//       "icon": $form-feedback-icon-valid
-//     ),
-//     "invalid": (
-//       "color": $form-feedback-invalid-color,
-//       "icon": $form-feedback-icon-invalid
-//     ),
-//   ),
-//   $form-validation-states
-// );
+@form-feedback-valid: {
+  color: @form-feedback-valid-color;
+   icon: @form-feedback-icon-valid;
+}
+
+@form-feedback-invalid: {
+  color: @form-feedback-invalid-color;
+   icon: @form-feedback-icon-invalid;
+}
+
+@form-validation-states: {
+  valid:   @form-feedback-valid;
+  invalid: @form-feedback-invalid;
+};
 
 
 // Z-index master list
