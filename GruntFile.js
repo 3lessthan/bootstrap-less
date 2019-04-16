@@ -11,7 +11,9 @@ module.exports = function(grunt) {
         },
 
         files: {
-          'dist/bootstrap.css': 'less/bootstrap.less'
+          'dist/bootstrap.css':        'less/bootstrap.less',
+          'dist/bootstrap-grid.css':   'less/bootstrap-grid.less',
+          'dist/bootstrap-reboot.css': 'less/bootstrap-reboot.less'
         }
       },
       dist: {
@@ -20,7 +22,9 @@ module.exports = function(grunt) {
           plugins: [new (require('less-plugin-clean-css'))('')]
         },
         files: {
-          'dist/bootstrap.min.css': 'less/bootstrap.less'
+          'dist/bootstrap.min.css':        'less/bootstrap.less',
+          'dist/bootstrap-grid.min.css':   'less/bootstrap-grid.less',
+          'dist/bootstrap-reboot.min.css': 'less/bootstrap-reboot.less'
         }
       }
     },
@@ -37,7 +41,7 @@ module.exports = function(grunt) {
           // normalizer
           require('postcss-normalize')(browsersOpt),
           // minify
-          require('cssnano')()
+          // require('cssnano')()
         ]
       },
       dist: {
@@ -52,7 +56,7 @@ module.exports = function(grunt) {
     }
   });
   grunt.registerTask('dist', ['less:dist', 'postcss:dist']);
-  grunt.registerTask('dev', ['less:dev']);
+  grunt.registerTask('dev',  ['less:dev']);
   // grunt.option('stack', true);
   grunt.registerTask('default', ['dev']);
 };
