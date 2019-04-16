@@ -1,15 +1,15 @@
 @import "./hover.less";
 @plugin "../plugins/color-yiq";
 
-#badge-variant(@bg; @color: color-yiq(@bg)) {
-	color: @color;
+#badge-variant(@bg; @color: color-yiq(@bg); @hover-bg: darken(@bg, 10%); @hover-color: @color;) {
+	color:            @color;
 	background-color: @bg;
 
 	&[href] {
 		#hover-focus({
-			color: @color;
-			text-decoration: none;
-			background-color: darken(@bg, 10%);
+			color:            @hover-color;
+			text-decoration:  none;
+			background-color: @hover-bg;
 		})
 	}
 }
