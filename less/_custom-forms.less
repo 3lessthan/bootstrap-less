@@ -32,7 +32,7 @@
 	&:checked ~ .custom-control-label::before {
     color:            @custom-control-indicator-checked-color;
     border-color:     @custom-control-indicator-checked-border-color;
-		background-color: @custom-control-indicator-checked-bg;
+		#gradient-bg(@custom-control-indicator-checked-bg);
 		#box-shadow(@custom-control-indicator-checked-box-shadow);
 	}
 
@@ -123,7 +123,7 @@
 	.custom-control-input:indeterminate ~ .custom-control-label {
 		&::before {
       border-color:     @custom-checkbox-indicator-indeterminate-border-color;
-			background-color: @custom-checkbox-indicator-indeterminate-bg;
+			#gradient-bg(@custom-checkbox-indicator-indeterminate-bg);
 			#box-shadow(@custom-checkbox-indicator-indeterminate-box-shadow);
 		}
 		&::after {
@@ -227,7 +227,8 @@
 	vertical-align:   middle;
   background:       @custom-select-background;
   background-color: @custom-select-bg;
-	border:           @custom-select-border-width solid @custom-select-border-color;
+  border:           @custom-select-border-width solid @custom-select-border-color;
+
   & when (@enable-rounded) {
 		border-radius: @custom-select-border-radius;
 	}
@@ -369,7 +370,7 @@
 		line-height:      @custom-file-line-height;
 		color:            @custom-file-button-color;
 		content:          "Browse";
-		background-color: @custom-file-button-bg;
+		#gradient-bg(@custom-file-button-bg);
 		border-left:      inherit;
 		#border-radius(0 @custom-file-border-radius @custom-file-border-radius 0);
 	}
@@ -406,7 +407,7 @@
 		width:            @custom-range-thumb-width;
 		height:           @custom-range-thumb-height;
 		margin-top:       ((@custom-range-track-height - @custom-range-thumb-height) / 2); // Webkit specific
-		background-color: @custom-range-thumb-bg;
+		#gradient-bg(@custom-range-thumb-bg);
 		border:           @custom-range-thumb-border;
 		#border-radius(@custom-range-thumb-border-radius);
 		#box-shadow(@custom-range-thumb-box-shadow);
@@ -414,7 +415,7 @@
 		appearance:       none;
 
 		&:active {
-			background-color: @custom-range-thumb-active-bg;
+			#gradient-bg(@custom-range-thumb-active-bg);
 		}
 	}
 
@@ -432,7 +433,7 @@
 	&::-moz-range-thumb {
 		width:            @custom-range-thumb-width;
 		height:           @custom-range-thumb-height;
-		background-color: @custom-range-thumb-bg;
+		#gradient-bg(@custom-range-thumb-bg);
 		border:           @custom-range-thumb-border;
 		#border-radius(@custom-range-thumb-border-radius);
 		#box-shadow(@custom-range-thumb-box-shadow);
@@ -440,7 +441,7 @@
 		appearance: none;
 
 		&:active {
-			background-color: @custom-range-thumb-active-bg;
+			#gradient-bg(@custom-range-thumb-active-bg);
 		}
 	}
 
@@ -461,7 +462,7 @@
 		margin-top:       0; // Edge specific
 		margin-right:     @custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
 		margin-left:      @custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
-		background-color: @custom-range-thumb-bg;
+		#gradient-bg(@custom-range-thumb-bg);
 		border:           @custom-range-thumb-border;
 		#border-radius(@custom-range-thumb-border-radius);
 		#box-shadow(@custom-range-thumb-box-shadow);
@@ -469,7 +470,7 @@
 		appearance:       none;
 
 		&:active {
-			background-color: @custom-range-thumb-active-bg;
+			#gradient-bg(@custom-range-thumb-active-bg);
 		}
 	}
 
