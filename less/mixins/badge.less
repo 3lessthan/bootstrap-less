@@ -1,6 +1,7 @@
 @import "./hover.less";
+@plugin "../plugins/color-yiq";
 
-#badge-variant(@bg; @color) {
+#badge-variant(@bg; @color: color-yiq(@bg)) {
 	color: @color;
 	background-color: @bg;
 

@@ -17,7 +17,7 @@
   background-color: transparent;
 	border:           @btn-border-width solid transparent;
 	#button-size(@btn-padding-y, @btn-padding-x, @btn-font-size, @btn-line-height, @btn-border-radius);
-	transition: @btn-transition;
+	#transition(@btn-transition);
 
 	// Share hover and focus styles
 	#hover({
@@ -35,15 +35,15 @@
 	&.disabled,
 	&:disabled {
 		opacity: @btn-disabled-opacity;
-		box-shadow: none;
+		#box-shadow(none);
 	}
 
 	&:not(:disabled):not(.disabled):active,
 	&:not(:disabled):not(.disabled).active {
-		box-shadow: @btn-active-box-shadow;
+		#box-shadow(@btn-active-box-shadow);
 
 		&:focus {
-			box-shadow: @btn-focus-box-shadow, @btn-active-box-shadow;
+			#box-shadow(@btn-focus-box-shadow, @btn-active-box-shadow);
 		}
 	}
 }
