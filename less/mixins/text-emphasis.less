@@ -1,12 +1,14 @@
 // Typography
 
-#text-emphasis-variant(@parent; @color; @hover-color: darken(@color, 10%)) {
+#text-emphasis-variant(@parent; @color) {
 	@{parent} {
 		color: @color !important;
-	}
-	a@{parent} {
-		#hover-focus({
-			color: @hover-color !important;
-		});
+  }
+  & when not (@emphasized-link-hover-darken-percentage = 0) {
+    a@{parent} {
+      #hover-focus({
+        color: darken(@color, @emphasized-link-hover-darken-percentage) !important;
+      });
+    }
 	}
 }
