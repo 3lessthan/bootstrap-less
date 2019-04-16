@@ -67,7 +67,7 @@
 //    @content;
 //  }
 //}
-#media-breakpoint-up(@name, @content, @breakpoints: @grid-breakpoints) {
+#media-breakpoint-up(@name; @content; @breakpoints: @grid-breakpoints) {
 	@min: breakpoint-min(@name, @breakpoints);
 
 	& when not (@min = ~"") {
@@ -92,7 +92,7 @@
 //    @content;
 //  }
 //}
-#media-breakpoint-down(@name, @content, @breakpoints: @grid-breakpoints) {
+#media-breakpoint-down(@name; @content; @breakpoints: @grid-breakpoints) {
 	@max: breakpoint-max(@name, @breakpoints);
 
 	& when not (@max = ~"") {
@@ -125,7 +125,7 @@
 //    }
 //  }
 //}
-#media-breakpoint-between(@lower, @upper, @content, @breakpoints: @grid-breakpoints) {
+#media-breakpoint-between(@lower; @upper; @content; @breakpoints: @grid-breakpoints) {
 	@min: breakpoint-min(@lower, @breakpoints);
 	@max: breakpoint-max(@upper, @breakpoints);
 
@@ -163,7 +163,7 @@
 //    }
 //  }
 //}
-#media-breakpoint-only(@name, @content, @breakpoints: @grid-breakpoints) {
+#media-breakpoint-only(@name; @content; @breakpoints: @grid-breakpoints) {
 	@min: breakpoint-min(@name, @breakpoints);
 	@max: breakpoint-max(@name, @breakpoints);
 
