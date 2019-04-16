@@ -1,0 +1,12 @@
+// Typography
+
+#text-emphasis-variant(@parent; @color; @hover-color: darken(@color, 10%)) {
+	@{parent} {
+		color: @color !important;
+	}
+	a@{parent} {
+		#hover-focus({
+			color: @hover-color !important;
+		});
+	}
+}
