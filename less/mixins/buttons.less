@@ -9,7 +9,7 @@
 
 #button-variant(@background; @border; @hover-background: darken(@background, 7.5%); @hover-border: darken(@border, 10%); @active-background: darken(@background, 10%); @active-border: darken(@border, 12.5%); @color: color-yiq(@background); @hover-color: color-yiq(@hover-background); @disabled-color: color-yiq(@background); @active-color: color-yiq(@active-background)) {
 	color:            @color;
-	background-color: @background;
+	#gradient-bg(@background);
 	border-color:     @border;
 	#box-shadow(@btn-box-shadow);
 
@@ -76,7 +76,7 @@
 
 	&.disabled,
 	&:disabled {
-		color: @color;
+		color:            @color;
 		background-color: transparent;
 	}
 
