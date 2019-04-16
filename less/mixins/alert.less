@@ -1,13 +1,13 @@
-#alert-variant(@background; @border; @color; @color-link: darken(@color, 10%); @color-hr: darken(@border, 5%)) {
-  color:            @color;
-  background-color: @background;
-  border-color:     @border;
+#alert-variant(@background; @border; @color; @link-color: darken(@color, 10%); @hr-color: darken(@border, 5%)) {
+	color:        @color;
+	#gradient-bg(@background);
+	border-color: @border;
 
-  hr {
-		border-top-color: @color-hr;
+	hr {
+		border-top-color: @hr-color;
 	}
 
-  .alert-link {
-    color: @color-link;
-  }
+	.alert-link {
+		color: @link-color;
+	}
 }
