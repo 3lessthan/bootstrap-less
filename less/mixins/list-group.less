@@ -1,0 +1,19 @@
+#list-group-item-variant(@state; @background; @color; @hover-color: @color; @hover-bg: darken(@background, 5%); @active-color: @white; @active-bg: @color; @active-border: @color) {
+	.list-group-item-@{state} {
+		color:            @color;
+		background-color: @background;
+
+		&.list-group-item-action {
+			#hover-focus({
+				color:            @hover-color;
+				background-color: @hover-bg;
+			});
+
+			&.active {
+				color:            @active-color;
+				background-color: @active-bg;
+				border-color:     @active-border;
+			}
+		}
+	}
+}
