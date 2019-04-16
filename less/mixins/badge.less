@@ -1,7 +1,7 @@
 @import "./hover.less";
 @plugin "../plugins/color-yiq";
 
-#badge-variant(@bg; @color: color-yiq(@bg); @hover-bg: darken(@bg, 10%); @hover-color: @color;) {
+#badge-variant(@bg; @color: color-yiq(@bg); @hover-bg: darken(@bg, 10%); @hover-color: @color) {
 	color:            @color;
 	background-color: @bg;
 
@@ -13,3 +13,4 @@
 		})
 	}
 }
+
