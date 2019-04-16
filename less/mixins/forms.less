@@ -56,13 +56,13 @@
     &.is-@{state} {
       border-color: @color;
 
-      & when (@enable-validation-icons) {
-        padding-right:       @input-height-inner;
-        background-image:    @icon;
-        background-repeat:   no-repeat;
-        background-position: center right @input-height-inner-quarter;
-        background-size:     @input-height-inner-half @input-height-inner-half;
-      }
+      // & when (@enable-validation-icons) {
+      //   padding-right:       @input-height-inner;
+      //   background-image:    @icon;
+      //   background-repeat:   no-repeat;
+      //   background-position: center right @input-height-inner-quarter;
+      //   background-size:     @input-height-inner-half @input-height-inner-half;
+      // }
 
       &:focus {
         border-color: @color;
@@ -77,23 +77,23 @@
   }
 
   // stylelint-disable-next-line selector-no-qualifying-type
-  textarea.form-control when (@enable-validation-icons) {
-    .was-validated &:@{state},
-    &.is-@{state} {
-      padding-right: @input-height-inner;
-      background-position: top @input-height-inner-quarter right @input-height-inner-quarter;
-    }
-	}
+  // textarea.form-control when (@enable-validation-icons) {
+  //   .was-validated &:@{state},
+  //   &.is-@{state} {
+  //     padding-right: @input-height-inner;
+  //     background-position: top @input-height-inner-quarter right @input-height-inner-quarter;
+  //   }
+	// }
 
 	.custom-select {
 		.was-validated &:@{state},
 		&.is-@{state} {
       border-color: @color;
 
-      & when (@enable-validation-icons) {
-        padding-right: @custom-select-feedback-icon-padding-right;
-        background: @custom-select-background, @icon @custom-select-bg no-repeat @custom-select-feedback-icon-position / @custom-select-feedback-icon-size;
-      }
+      // & when (@enable-validation-icons) {
+      //   padding-right: @custom-select-feedback-icon-padding-right;
+      //   background: @custom-select-background, @icon @custom-select-bg no-repeat @custom-select-feedback-icon-position / @custom-select-feedback-icon-size;
+      // }
 
 			&:focus {
 				border-color: @color;

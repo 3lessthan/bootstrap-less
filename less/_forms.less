@@ -250,7 +250,7 @@ textarea.form-control {
 // pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
 // server side validation.
 each(@form-validation-states, #(@data, @state) {
-  #form-validation-state(@state, @data[color]/* , @data[icon] */); //!TODO: Mixin needs to handle icon
+  #form-validation-state(@state, @data[color], @data[icon]); //!TODO: Mixin needs to handle icon
 });
 
 // #form-validation-state(valid, @form-feedback-valid-color);
