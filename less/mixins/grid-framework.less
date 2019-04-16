@@ -65,7 +65,7 @@
 //    }
 //  }
 //}
-#make-grid-columns(@columns: @grid-columns, @gutter: @grid-gutter-width, @breakpoints: @grid-breakpoints) {
+#make-grid-columns(@columns: @grid-columns; @gutter: @grid-gutter-width; @breakpoints: @grid-breakpoints) {
 	// Common properties for all breakpoints
 	// LESS PORT: Unfortunately we have to use an actual selector here in order to be able to
 	// `:extend()` it later. This means that the selector is output in the compiled CSS, creating a

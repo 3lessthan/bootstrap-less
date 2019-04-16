@@ -19,7 +19,7 @@
 //    }
 //  }
 //}
-#make-container-max-widths(@max-widths: @container-max-widths, @breakpoints: @grid-breakpoints) {
+#make-container-max-widths(@max-widths: @container-max-widths; @breakpoints: @grid-breakpoints) {
 	each(@max-widths, #(@container-max-width, @breakpoint) {
 		#media-breakpoint-up(@breakpoint, {
 			max-width: @container-max-width;
@@ -45,7 +45,7 @@
 	padding-left:  (@grid-gutter-width / 2);
 }
 
-#make-col(@size, @columns: @grid-columns) {
+#make-col(@size; @columns: @grid-columns) {
 	flex:      0 0 percentage((@size / @columns));
 	// Add a `max-width` to ensure content within each column does not blow out
 	// the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
@@ -53,7 +53,7 @@
 	max-width: percentage((@size / @columns));
 }
 
-#make-col-offset(@size, @columns: @grid-columns) {
+#make-col-offset(@size; @columns: @grid-columns) {
 	@num: (@size / @columns);
 
 	& when (@num = 0) {
